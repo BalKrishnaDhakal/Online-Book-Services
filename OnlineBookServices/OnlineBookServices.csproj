@@ -210,6 +210,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MemberShipTypeController.cs" />
+    <Compile Include="Extensions\ThumbnailExtension.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -225,6 +226,10 @@
     <Compile Include="Migrations\201912040256584_SeedMembershipTypeDatabase.Designer.cs">
       <DependentUpon>201912040256584_SeedMembershipTypeDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912060224378_AddFieldToMembershipTable.cs" />
+    <Compile Include="Migrations\201912060224378_AddFieldToMembershipTable.Designer.cs">
+      <DependentUpon>201912060224378_AddFieldToMembershipTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Book.cs" />
@@ -233,9 +238,11 @@
     <Compile Include="Models\IndividualButtonPartial.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MemberShipType.cs" />
+    <Compile Include="Models\ThumbnailModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\BookViewModel.cs" />
+    <Compile Include="ViewModel\ThumbnailBoxViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -253,6 +260,7 @@
     <Content Include="Content\images\snowman.jpg" />
     <Content Include="Content\images\theAlice.jpg" />
     <Content Include="Content\images\wisdom.jpg" />
+    <Content Include="Content\thumbnail.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -327,6 +335,7 @@
     <Content Include="Views\MemberShipType\Details.cshtml" />
     <Content Include="Views\MemberShipType\Edit.cshtml" />
     <Content Include="Views\MemberShipType\Index.cshtml" />
+    <Content Include="Views\Shared\_ThumbnailAreaPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -353,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912040256584_SeedMembershipTypeDatabase.resx">
       <DependentUpon>201912040256584_SeedMembershipTypeDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912060224378_AddFieldToMembershipTable.resx">
+      <DependentUpon>201912060224378_AddFieldToMembershipTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
